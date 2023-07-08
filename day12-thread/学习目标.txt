@@ -1,0 +1,32 @@
+1、掌握阻塞队列的使用
+    BlockingQueue接口的实现
+        ArrayBlockingQueue 有界队列
+        LinkedBlockingQueue 无界队列
+
+        put
+        take
+
+2、 掌握线程池的标准创建方式
+public ThreadPoolExecutor(int corePoolSize,						// 核心线程数量
+ *                           int maximumPoolSize,					// 最大线程数量
+ *                           long keepAliveTime,					// 空闲线程存活时间（值）
+ *                           TimeUnit unit,						    // 空闲线程存活时间（单位）
+ *                           BlockingQueue<Runnable> workQueue,	    // 阻塞队列
+ *                           ThreadFactory threadFactory,			// 新线程的创建工厂（产生方式）
+ *                           RejectedExecutionHandler handler)		// 拒绝策略
+                   四种拒绝策略 ThreadPoolExecutor 这个类的四个静态内部类
+     submit方法提交任务
+
+3、理解volatile关键字含义
+    可见性和有序性
+
+4、atomic包下的原子操作类AtomicInteger（CAS）
+    实现原子性修改 int 值
+
+5、掌握 ConcurrentHashMap 的数据结构和同步方案（面试）
+
+6、练习工具类  √
+    CountDownLatch
+    Semaphore
+
+

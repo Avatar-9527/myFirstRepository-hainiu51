@@ -1,0 +1,17 @@
+1、使用空参构造创建对象时，创建了一个默认容量为16个字符的char数组
+
+2、如果添加到数据长度 + 之前已经存在的数据长度， 没有超过容量，添加到数组中，不扩容
+
+3、当添加的数据 + 原来存在的数据长度 超过容量时，扩容
+    首先计算原来数组长度的2倍 + 2，作为新容量
+    判断新容量是否够用，如果够用，采用这个新容量
+    如果不够用，使用本次添加数据需要的最小容量（添加的数据 + 原来存在的数据长度）作为新容量
+
+4、扩容时，使用新容量创建数组，将原数组中的数据拷贝到新数组，使用新数组覆盖原数组。
+
+
+以下两个方法是用于数组拷贝到
+public static native void arraycopy(Object src, int srcPos, Object dest, int destPos, int length);
+          // 参数   原数组   开始位置   目标数组  开始位置   长度
+// 将original数组中的元素全部拷贝到长度为newLength的新数组中，将新数组返回
+public static char[] copyOf(char[] original, int newLength)
